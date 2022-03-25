@@ -64,7 +64,7 @@ try:
         #推送实例状态
         msg= "实例ID：" + InstanceId + '\n' + "实例状态：" + InstanceState + '\n' + "总流量：" + str(TrafficPackageTotal) + "GB" + '\n' + "已使用：" + str(TrafficUsed) + "GB" + '\n' + "剩余：" + TrafficPackageRemaining + "GB"
         Server_Push= "https://msg.2525.in/send/?msgqq=753658584&type=1&token=" + Sendtoken + "&toqq=" + Sendqq + "&text=" + msg
-        #requests.get(url=Server_Push).text
+        requests.get(url=Server_Push).text
         print(msg)
 
         if (TrafficUsed/TrafficPackageTotal<percent):                 
